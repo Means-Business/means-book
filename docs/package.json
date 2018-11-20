@@ -1,25 +1,27 @@
 {
-  "name": "gitbook-publishable-template",
+  "name": "means-book",
   "version": "1.0.0",
-  "description": "A template for publishing a Gitboo",
+  "description": "Coding tutorial book",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rebeccapeltz/gitbook-publishable-template.git"
+    "url": "git+https://git@github.com:Means-Business/means-book.git"
   },
-  "author": "Becky Peltz",
+  "author": "Manot Luijiu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rebeccapeltz/gitbook-publishable-template/issues"
+    "url": "https://github.com/Means-Business/means-book/issues"
   },
   "devDependencies": {
     "child_process": "^1.0.2",
     "del": "^3.0.0",
-    "gulp": "4.0.0",
-    "gulp-load-plugins": "^1.5.0"
+    "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-load-plugins": "^1.5.0",
+    "run-sequence": "^2.2.1"
   },
-  "homepage": "https://github.com/rebeccapeltz/gitbook-publishable-tempalte#readme"
+  "homepage": "https://docs.means-business.com"
 }
