@@ -22,7 +22,7 @@
 
 * ใช้ Database แบบ noSQL
 * ใช้ noSQL ยี่ห้อ MongoDB
-* สร้างแบบจำลองบน MongoDB โดยใช้ตัวช่วยชื่อว่า "mongoose"
+* สร้างแบบจำลองบน MongoDB โดยใช้ตัวช่วยชื่อว่า "**mongoose**"
 
 ลองดูโค๊ดนี้
 
