@@ -149,5 +149,51 @@ new Schema({
 });
 ```
 
-พอปั้นเสร็จก็เอาไปเก็บในกล่องชื่อว่า "mongoSchema" พล็อตเป็นภาษา JavaScri
+พอปั้นเสร็จก็เอาไปเก็บในกล่องชื่อว่า "**mongoSchema**"
+
+```
+const mongoSchema = new Schema({
+  googleId: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  googleToken: {
+    access_token: String,
+    refresh_token: String,
+    token_type: String,
+    expiry_date: Number,
+  },
+  slug: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  createdAt: {
+    type: Date,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  isAdmin: {
+    type: Boolean,
+    default: false,
+  },
+  displayName: String,
+  avatarUrl: String,
+
+  isGithubConnected: {
+    type: Boolean,
+    default: false,
+  },
+  githubAccessToken: {
+    type: String,
+  },
+});
+```
+
+
 
