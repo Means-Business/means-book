@@ -199,9 +199,13 @@ const mongoSchema = new Schema({
 
 ```
 // สร้างแบบจำลองให้ Database
-import mongoose from 'mongoose'; // นำกล่อง mongoose มาไว้บนตัก
+// นำกล่อง mongoose มาไว้บนตัก
+import mongoose from 'mongoose';
 
-const { Schema } = mongoose; // เปิดกล่อง mongoose ออกมาแล้วหยิบของเล่น Schema ไปใส่ในกล่องย่อยที่ชื่อ Schema
+
+// เปิดกล่อง mongoose ออกมาแล้วหยิบของเล่น Schema ไปใส่ในกล่องย่อยที่ชื่อ Schema
+const { Schema } = mongoose;
+
 
 const mongoSchema = new Schema({...}); // นำกล่องย่อยมาปั้นเล่นให้เป็น mongoSchema
 
@@ -210,6 +214,14 @@ const User = mongoose.model('User', mongoSchema); // เวลาจะนำไ
 
 export default User; // ส่งมอบกล่องที่ชื่อ User ให้เพื่อนเราที่ชื่อ app.js นำไปใช้
 ```
+
+อธิบายเป็นภาษามนุษย์ดังนี้
+
+1. นำกล่อง mongoose มาไว้บนตัก
+2. เปิดกล่อง mongoose ออกมาแล้วหยิบของเล่นชิ้นที่ 1 คือ Schema ไปใส่ในกล่องย่อยที่ชื่อ Schema
+3. นำกล่องย่อยมาปั้นเล่น พอปั้นเสร็จให้ชื่อว่า mongoSchema
+4. mongoSchema ต้องเล่นร่วมกันกับของเล่นชิ้นที่ 2 ที่ชื่อว่า model ซึ่งมันมีวิธีเล่นคือ 1. ต้องมีป้ายชื่อ 2. เอา mongoSchema ที่เราเพิ่งปั้นเสร็จมาใส่เข้าไปใน model
+5. พอเราประกอบร่างของเล่น 2 ชิ้นเสร็จแล้ว ก็ส่งมอบให้ app.js ยืมไปเล่น
 
 
 
