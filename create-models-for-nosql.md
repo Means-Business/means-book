@@ -209,6 +209,7 @@ const mongoSchema = new Schema({...}); // อธิบาย 3
 
 const User = mongoose.model('User', mongoSchema); // อธิบาย 4
 
+
 export default User; // อธิบาย 5
 ```
 
