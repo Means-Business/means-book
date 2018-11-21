@@ -100,5 +100,54 @@ const Schema = mongoose.Schema; // นำของเล่นชื่อ "mong
 const User = mongoose.model; // นำของเล่นชื่อ "mongoose.model" มาใส่ในกล่องเล็กๆชื่อว่า "User"
 ```
 
+> หมายเหตุ: const Schema = mongoose.Schema; สามารถลดรูปเป็น const { Schema } = mongoose;
 
+สมมุติต่อ เราหยิบของเล่นที่ชื่อ "Schema" มาเล่น วิธีเล่นคือเราเอามานั่งปั้นเหมือนปั้นดินน้ำมันให้เป็นรูปตามที่เราต้องการ ในกรณีนี้เราต้องการปั้นเป็นห้อง ๆ หนึ่งเอาไว้เก็บคุณสมบัติของ "User" โดยพล็อตเป็นภาษา JavaScript ได้ดังนี้
+
+```
+// ขอเรียก "ปั้น" ในภาษามนุษย์ว่า "new" ในภาษา JavaScript
+new Schema({
+  googleId: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  googleToken: {
+    access_token: String,
+    refresh_token: String,
+    token_type: String,
+    expiry_date: Number,
+  },
+  slug: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  createdAt: {
+    type: Date,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  isAdmin: {
+    type: Boolean,
+    default: false,
+  },
+  displayName: String,
+  avatarUrl: String,
+
+  isGithubConnected: {
+    type: Boolean,
+    default: false,
+  },
+  githubAccessToken: {
+    type: String,
+  },
+});
+```
+
+พอปั้นเสร็จก็เอาไปเก็บในกล่องชื่อว่า "mongoSchema" พล็อตเป็นภาษา JavaScri
 
