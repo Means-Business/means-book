@@ -198,8 +198,6 @@ const mongoSchema = new Schema({
 พอเขียนโค๊ดเสร็จเราก็จับแต่หลักการ โดยในหัวเราจะมีแค่ภาพนี้
 
 ```
-// สร้างแบบจำลองให้ Database
-// นำกล่อง mongoose มาไว้บนตัก
 import mongoose from 'mongoose';
 
 
