@@ -195,5 +195,21 @@ const mongoSchema = new Schema({
 });
 ```
 
+พอเขียนโค๊ดเสร็จเราก็จับแต่หลักการ โดยในหัวเราจะมีแค่ภาพนี้
+
+```
+// สร้างแบบจำลองให้ Database
+import mongoose from 'mongoose'; // นำกล่อง mongoose มาไว้บนตัก
+
+const { Schema } = mongoose; // เปิดกล่อง mongoose ออกมาแล้วหยิบของเล่น Schema ไปใส่ในกล่องย่อยที่ชื่อ Schema
+
+const mongoSchema = new Schema({...}); // นำกล่องย่อยมาปั้นเล่นให้เป็น mongoSchema
+
+// นำไปใช้ใน app.js
+const User = mongoose.model('User', mongoSchema); // เวลาจะนำไปใช้ก็เก็บทั้งหมดใส่ในกล่องอีกครั้งตั้งชื่อใหม่ว่า User
+
+export default User; // ส่งมอบกล่องที่ชื่อ User ให้เพื่อนเราที่ชื่อ app.js นำไปใช้
+```
+
 
 
