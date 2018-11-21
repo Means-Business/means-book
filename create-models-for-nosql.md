@@ -201,7 +201,6 @@ const mongoSchema = new Schema({
 import mongoose from 'mongoose';
 
 
-// เปิดกล่อง mongoose ออกมาแล้วหยิบของเล่น Schema ไปใส่ในกล่องย่อยที่ชื่อ Schema
 const { Schema } = mongoose;
 
 
