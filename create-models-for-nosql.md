@@ -198,18 +198,18 @@ const mongoSchema = new Schema({
 พอเขียนโค๊ดเสร็จเราก็จับแต่หลักการ โดยในหัวเราจะมีแค่ภาพนี้
 
 ```
-import mongoose from 'mongoose';
+import mongoose from 'mongoose'; // อธิบาย 1
 
 
-const { Schema } = mongoose;
+const { Schema } = mongoose; // อธิบาย 2
 
 
-const mongoSchema = new Schema({...}); // นำกล่องย่อยมาปั้นเล่นให้เป็น mongoSchema
+const mongoSchema = new Schema({...}); // อธิบาย 3
 
-// นำไปใช้ใน app.js
-const User = mongoose.model('User', mongoSchema); // เวลาจะนำไปใช้ก็เก็บทั้งหมดใส่ในกล่องอีกครั้งตั้งชื่อใหม่ว่า User
 
-export default User; // ส่งมอบกล่องที่ชื่อ User ให้เพื่อนเราที่ชื่อ app.js นำไปใช้
+const User = mongoose.model('User', mongoSchema); // อธิบาย 4
+
+export default User; // อธิบาย 5
 ```
 
 อธิบายเป็นภาษามนุษย์ดังนี้
